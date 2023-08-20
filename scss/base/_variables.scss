@@ -1,0 +1,20 @@
+$color-primario: cadetblue;
+$color-secundario:mintcream;
+$color-frutal: red;
+$color-citrico: orange;
+$color-floral: pink;
+$color-gourmet: green;
+$color-oriental: lightblue;
+
+$size-text: 20px;
+$size-h1: 40px;
+$size-h2: 30px;
+$size-h3: 25px;
+
+@mixin flex($direction, $justify, $aling, $gap){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $aling;
+    gap: $gap;
+}
