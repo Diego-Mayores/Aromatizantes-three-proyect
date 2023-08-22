@@ -1,5 +1,6 @@
 //base
 @import 'base/reset';
+@import 'base/variables';
 
 //components
 @import 'components/footer';
@@ -9,4 +10,5 @@
 @import 'layout/ambientales.scss';
 @import 'layout/autoaromas.scss';
 @import 'layout/difusores.scss';
+@import 'layout/index.scss';
 @import 'layout/textiles.scss';
