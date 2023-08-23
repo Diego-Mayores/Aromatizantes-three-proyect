@@ -1,3 +1,85 @@
-.catalogue{
+.card-fragan{
     display: flex;
+
+    img{
+        height: 400px;
+        width: auto;
+        object-fit: cover;
+    }
+
+    .card-text{
+        @include flex(column,center,center);
+        background-color: $color-secundario;
+
+        h1{
+            font-size: $size-h2;
+        }
+
+        p{
+            font-size: $size-text;
+        }
+    }
+}
+
+.catalogue{
+    @include flex(column,space-between,space-between);
+    background-color: $color-secundario;
+
+    .catalogue-fragan{
+        @include flex(row,center,center);
+        height: 50px;
+        width: auto;
+
+        .catalogue-text{
+            @include flex(column,center,center);
+
+            h2{
+                font-size: $size-h3;
+            }
+
+            p{
+                font-size: $size-text;
+            }
+        }
+
+        .icono-gourmet{
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+            padding: 5px;
+            background-color: $color-gourmet;
+        }
+
+        .icono-oriental{
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+            padding: 5px;
+            background-color: $color-oriental;
+        }
+
+        .icono-floral{
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+            padding: 5px;
+            background-color: $color-floral;
+        }
+
+        .icono-citrico{
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+            padding: 5px;
+            background-color: $color-citrico;
+        }
+
+        .icono-frutal{
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+            padding: 5px;
+            background-color: $color-frutal;
+        }
+    }
 }

@@ -1,42 +1,183 @@
 .host{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: radial-gradient($color-secundario, rgba(252, 226, 79, 0.658));
+    @include flex(column,center,center);
+    background-color: $color-secundario;
     height: 400px;
+
+    h1{
+        font-size: $size-h1;
+    }
+
+    p{
+        font-size: $size-text;
+    }
 }
 
-.carousel{
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
-    position: relative;
+.container{
+    display: flex;
+    justify-content: center;
 
-    .move{
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        opacity: 0;
+    .menu{
+        display: flex;
+        flex-direction: column;
+        line-height: 0;
 
-        img{
-            width: 100%;
-            height: 100%;
+        li{
+            flex: auto;
+
+            a{
+                display: block;
+            }
+            img{
+                height: 20vmin;
+                width: 30vmin;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+    }
+
+    .slider{
+        overflow: hidden;
+        height: 100vmin;
+        width: 75vmin;
+
+        li{
+            width: 75vmin;
+            height: 100vmin;
+            position: absolute;
+            z-index: 1;
+        }
+        img {
+            height: 100vmin;
             object-fit: cover;
+            object-position: top;
+        }
+        &li:target {
+            z-index: 3;
+            
         }
     }
 }
 
-@keyframes carousel {
-    0%{
-        opacity: 1;
+
+
+.fragan{
+    @include flex(row,space-around,center);
+    flex-wrap: wrap;
+    background-color: $color-secundario;
+
+    .tipo-fragan{
+        @include flex(row,center,center);
+        width: 500px;
+        margin: 100px;
+
+        .icono-gourmet{
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+            padding: 5px;
+            background-color: $color-gourmet;
+            margin-right: 10px;
+        }
+
+        .icono-oriental{
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+            padding: 5px;
+            background-color: $color-oriental;
+            margin-right: 10px;
+        }
+
+        .icono-floral{
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+            padding: 5px;
+            background-color: $color-floral;
+            margin-right: 10px;
+        }
+
+        .icono-citrico{
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+            padding: 5px;
+            background-color: $color-citrico;
+            margin-right: 10px;
+        }
+
+        .icono-frutal{
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+            padding: 5px;
+            background-color: $color-frutal;
+            margin-right: 10px;
+        }
+
+        p{
+            font-size: $size-text;
+        }
     }
-    8%{
-        opacity: 0;
-    }
-    33%{
-        opacity: 0;
-    }
-    40%{
-        opacity: 1;
+}
+
+.h-fragan{
+    @include flex(row,center,center);
+    height: 400px;
+    width: auto;
+    background-image: url(../../images/ftodas.webp);
+    object-fit: cover;
+}
+.h-frutal{
+    @include flex(row,center,center);
+    height: 400px;
+    width: auto;
+    background-image: url(../../images/fragancias-frutales.jpg);
+    object-fit: cover;
+}
+.h-floral{
+    @include flex(row,center,center);
+    height: 400px;
+    width: auto;
+    background-image: url(../../images/fflorales.jpg);
+    object-fit: cover;
+}
+.h-gourmet{
+    @include flex(row,center,center);
+    height: 400px;
+    width: auto;
+    background-image: url(../../images/fgourmet.webp);
+    object-fit: cover;
+}
+.h-oriental{
+    @include flex(row,center,center);
+    height: 400px;
+    width: auto;
+    background-image: url(../../images/foriente.jpg);
+    object-fit: cover;
+}
+.h-citric{
+    @include flex(row,center,center);
+    height: 400px;
+    width: auto;
+    background-image: url(../../images/fcitricas.png);
+    object-fit: cover;
+}
+.lists{
+    background-color: $color-secundario;
+    width: 100%;
+    height: auto;
+
+    .list{
+        @include flex(row,space-around,end);
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+        margin: 20px 40px;
+
+        li{
+            margin: 10px 40px;
+        }
     }
 }

@@ -11,10 +11,9 @@ $size-h1: 40px;
 $size-h2: 30px;
 $size-h3: 25px;
 
-@mixin flex($direction, $justify, $aling, $gap) {
+@mixin flex($direction, $justify, $aling) {
     display: flex;
     flex-direction: $direction;
     justify-content: $justify;
     align-items: $aling;
-    gap: $gap;
 }

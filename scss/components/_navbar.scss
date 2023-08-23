@@ -1,19 +1,23 @@
 //navbar
 .navbar {
-    @include flex(row,space-between,center,0px);
+    @include flex(row,space-between,center);
     background-color: $color-primario;
-    padding: 20px 20px;
+
     color: white;
     font-size: $size-text;
     list-style: none;
 
-    .logo{
-        height: 30px;
+    img{
+        height: 90px;
         width: auto;
+        object-fit: cover;
+        object-position: center;
+        padding: 5px;
     }
 
     .links {
         display: flex;
+        margin: 20px;
 
         li a {
             text-decoration: none;

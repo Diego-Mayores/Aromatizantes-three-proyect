@@ -1,38 +1,337 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: cadetblue;
+  border-top: solid black 2px;
+}
+
 .navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 0px;
   background-color: cadetblue;
-  padding: 20px 20px;
   color: white;
   font-size: 20px;
   list-style: none;
 }
-
-.logo {
-  font-size: 20px;
-  text-decoration: none;
-  color: white;
+.navbar img {
+  height: 90px;
+  width: auto;
+  object-fit: cover;
+  object-position: center;
+  padding: 5px;
 }
-
-.links {
+.navbar .links {
   display: flex;
+  margin: 20px;
 }
-
-.links li a {
+.navbar .links li a {
   text-decoration: none;
   color: white;
   margin-left: 40px;
   transition: 5s;
 }
-.links li a:hover {
+.navbar .links li a:hover {
   background-color: white;
   background-size: 100% 100%;
   color: cadetblue;
   border: solid rgba(95, 158, 160, 0.247);
   border-radius: 15%;
+}
+
+.card-fragan {
+  display: flex;
+}
+.card-fragan img {
+  height: 400px;
+  width: auto;
+  object-fit: cover;
+}
+.card-fragan .card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: mintcream;
+}
+.card-fragan .card-text h1 {
+  font-size: 30px;
+}
+.card-fragan .card-text p {
+  font-size: 20px;
+}
+
+.catalogue {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  background-color: mintcream;
+}
+.catalogue .catalogue-fragan {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: auto;
+}
+.catalogue .catalogue-fragan .catalogue-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.catalogue .catalogue-fragan .catalogue-text h2 {
+  font-size: 25px;
+}
+.catalogue .catalogue-fragan .catalogue-text p {
+  font-size: 20px;
+}
+.catalogue .catalogue-fragan .icono-gourmet {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  padding: 5px;
+  background-color: green;
+}
+.catalogue .catalogue-fragan .icono-oriental {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  padding: 5px;
+  background-color: lightblue;
+}
+.catalogue .catalogue-fragan .icono-floral {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  padding: 5px;
+  background-color: pink;
+}
+.catalogue .catalogue-fragan .icono-citrico {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  padding: 5px;
+  background-color: orange;
+}
+.catalogue .catalogue-fragan .icono-frutal {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  padding: 5px;
+  background-color: red;
+}
+
+.host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: mintcream;
+  height: 400px;
+}
+.host h1 {
+  font-size: 40px;
+}
+.host p {
+  font-size: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+.container .menu {
+  display: flex;
+  flex-direction: column;
+  line-height: 0;
+}
+.container .menu li {
+  flex: auto;
+}
+.container .menu li a {
+  display: block;
+}
+.container .menu li img {
+  height: 20vmin;
+  width: 30vmin;
+  object-fit: cover;
+  object-position: top;
+}
+.container .slider {
+  overflow: hidden;
+  height: 100vmin;
+  width: 75vmin;
+}
+.container .slider li {
+  width: 75vmin;
+  height: 100vmin;
+  position: absolute;
+  z-index: 1;
+}
+.container .slider img {
+  height: 100vmin;
+  object-fit: cover;
+  object-position: top;
+}
+.container .sliderli:target {
+  z-index: 3;
+}
+
+.fragan {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: mintcream;
+}
+.fragan .tipo-fragan {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  margin: 100px;
+}
+.fragan .tipo-fragan .icono-gourmet {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  padding: 5px;
+  background-color: green;
+  margin-right: 10px;
+}
+.fragan .tipo-fragan .icono-oriental {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  padding: 5px;
+  background-color: lightblue;
+  margin-right: 10px;
+}
+.fragan .tipo-fragan .icono-floral {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  padding: 5px;
+  background-color: pink;
+  margin-right: 10px;
+}
+.fragan .tipo-fragan .icono-citrico {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  padding: 5px;
+  background-color: orange;
+  margin-right: 10px;
+}
+.fragan .tipo-fragan .icono-frutal {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  padding: 5px;
+  background-color: red;
+  margin-right: 10px;
+}
+.fragan .tipo-fragan p {
+  font-size: 20px;
+}
+
+.h-fragan {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: auto;
+  background-image: url(../../images/ftodas.webp);
+  object-fit: cover;
+}
+
+.h-frutal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: auto;
+  background-image: url(../../images/fragancias-frutales.jpg);
+  object-fit: cover;
+}
+
+.h-floral {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: auto;
+  background-image: url(../../images/fflorales.jpg);
+  object-fit: cover;
+}
+
+.h-gourmet {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: auto;
+  background-image: url(../../images/fgourmet.webp);
+  object-fit: cover;
+}
+
+.h-oriental {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: auto;
+  background-image: url(../../images/foriente.jpg);
+  object-fit: cover;
+}
+
+.h-citric {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: auto;
+  background-image: url(../../images/fcitricas.png);
+  object-fit: cover;
+}
+
+.lists {
+  background-color: mintcream;
+  width: 100%;
+  height: auto;
+}
+.lists .list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: end;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  margin: 20px 40px;
+}
+.lists .list li {
+  margin: 10px 40px;
 }
 
 /*# sourceMappingURL=style.css.map */
